@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginformsComponent } from './loginforms/loginforms.component';
+import { LoginComponent } from './login.component';
 
 @NgModule({
-  declarations: [ LoginformsComponent ],
-  imports: [CommonModule],
-  providers: [],
-  bootstrap: [ LoginformsComponent ],
+  imports: [
+    CommonModule
+  ],
+  declarations: [
+    LoginComponent,
+  ]
 })
-export class LoginModule {}
+export class LoginModule { }

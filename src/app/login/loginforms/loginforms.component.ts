@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'loginforms',
+  selector: 'app-loginforms',
   templateUrl: './loginforms.component.html',
   styleUrls: ['./loginforms.component.css']
 })
