@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'loginforms',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginformsComponent implements OnInit {
 
-  constructor() { }
+  email: string;
+  password: string;
+
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.email = params['Email'];
+      this.password = params['Password']
+    });
   }
 
 }
