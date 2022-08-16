@@ -1,6 +1,5 @@
 import { Component, enableProdMode, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'loginforms',
