@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, enableProdMode, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'loginforms',
@@ -13,13 +14,19 @@ export class LoginformsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.email = params['Email'];
-      this.password = params['Password']
+      this.email = params['email'];
+      this.password = params['password']
     });
+    this.click_pressed();
   }
 
+  click_pressed(): void {
+    if (this.email != undefined && this.password != undefined)
+      this.router.navigate(['home']);
+  }
 }
